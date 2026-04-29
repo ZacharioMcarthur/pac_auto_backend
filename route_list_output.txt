@@ -1,0 +1,99 @@
+﻿
+  GET|HEAD        / .............................................................................................................. 
+  POST            _ignition/execute-solution ....... ignition.executeSolution ÔÇ║ Spatie\LaravelIgnition ÔÇ║ ExecuteSolutionController
+  GET|HEAD        _ignition/health-check ................... ignition.healthCheck ÔÇ║ Spatie\LaravelIgnition ÔÇ║ HealthCheckController
+  POST            _ignition/update-config ................ ignition.updateConfig ÔÇ║ Spatie\LaravelIgnition ÔÇ║ UpdateConfigController
+  GET|HEAD        api/affectation/attributs/{typeVehiculeId}/{demande_id} ..... DemandeCourseController@getAttributaffecterDemande
+  GET|HEAD        api/affectation/list ................................................. DemandeCourseController@getDemandeAffecte
+  POST            api/affectation/save ................................................... DemandeCourseController@affecterDemande
+  POST            api/affectation/update ............................................... DemandeCourseController@updateAffectation
+  GET|HEAD        api/auth/profile ........................................................................ AuthController@profile
+  GET|HEAD        api/chauffeur/get/{chauffeurId} ........................................... ChauffeurController@getChauffeurById
+  GET|HEAD        api/chauffeur/list ........................................................... ChauffeurController@getChauffeurs
+  POST            api/chauffeur/save ........................................................... ChauffeurController@saveChauffeur
+  POST            api/chauffeur/update-disponibilite/{chauffeurId} ....................... ChauffeurController@updateDisponibilite
+  GET|HEAD        api/dashboard/stats .................................................. API\DashboardController@getDashboardStats
+  POST            api/demande/close/{demandeId} ............................................ DemandeCourseController@arreterCourse
+  POST            api/demande/delete ................................................. DemandeCourseController@deleteDemandeCourse
+  GET|HEAD        api/demande/delete/{demandeId} ................................. DemandeCourseController@deleteDemandeCourseById
+  POST            api/demande/edit ........................................................... DemandeCourseController@editDemande
+  GET|HEAD        api/demande/en-cours/{user_id}/{role} ........................... DemandeCourseController@getDemandeCourseEnCour
+  POST            api/demande/filtrer-en-cours ............................. DemandeCourseController@getDemandeCourseEnCourFiltrer
+  GET|HEAD        api/demande/get/{demandeId} ....................................... DemandeCourseController@getDemandeCourseById
+  GET|HEAD        api/demande/last/{userId} ............................................... DemandeCourseController@getLastDemande
+  GET|HEAD        api/demande/list/{user_id}/{role} .................................. DemandeCourseController@listDemandeVehicule
+  POST            api/demande/pourmoi ................................................. DemandeCourseController@saveDemandePourMoi
+  POST            api/demande/save ........................................................... DemandeCourseController@saveDemande
+  POST            api/demande/start/{demandeId} ........................................... DemandeCourseController@demmarerCourse
+  POST            api/demande/update/{demandeId} ......................................... DemandeCourseController@editDemandeById
+  GET|HEAD        api/demande/{userId} ......................................... DemandeCourseController@listDemandeVehiculeByUser
+  GET|HEAD        api/entites ......................................................... entites.index ÔÇ║ API\EntiteController@index
+  POST            api/entites ......................................................... entites.store ÔÇ║ API\EntiteController@store
+  GET|HEAD        api/entites/{entite} .................................................. entites.show ÔÇ║ API\EntiteController@show
+  PUT|PATCH       api/entites/{entite} .............................................. entites.update ÔÇ║ API\EntiteController@update
+  DELETE          api/entites/{entite} ............................................ entites.destroy ÔÇ║ API\EntiteController@destroy
+  POST            api/forgot-password .................................................. API\PasswordResetController@sendResetLink
+  POST            api/historiques/chauffeurs ........................................ HistoriqueController@getHistoriquesChaufeurs
+  POST            api/historiques/demandes ........................................... HistoriqueController@getHistoriquesDemandes
+  GET|HEAD        api/historiques/directions .................................................. HistoriqueController@getDirections
+  POST            api/historiques/export-chauffeurs ............................. HistoriqueController@exportPerformancesChauffeur
+  POST            api/historiques/export-demandes ........................... HistoriqueController@exportHistoriqueDemandesCourses
+  GET|HEAD        api/journal-sms/list ............................................................ JournalSmsController@getAllSMS
+  POST            api/journal-sms/search .......................................................... JournalSmsController@searchSMS
+  POST            api/login ................................................................................. AuthController@login
+  GET|HEAD        api/motif/list ........................................................................ MotifController@getMotif
+  GET|HEAD        api/motif/{motifId} ............................................................... MotifController@getMotifById
+  GET|HEAD        api/notation/criteres ........................................... CritereDeNotationController@getCritereNotation
+  GET|HEAD        api/notation/get/{demande_id} ................................................ NoteController@getNoteByIdDemande
+  POST            api/notation/save .................................................................. NoteController@saveNewNotes
+  GET|HEAD        api/planning/delete/{planningId} .................................. PlanningGardeController@deletePlanningGardes
+  POST            api/planning/download ................................................. PlanningGardeController@downloadPlanning
+  GET|HEAD        api/planning/get/{planningId} .................................... PlanningGardeController@getPlanningGardesById
+  GET|HEAD        api/planning/list .................................................... PlanningGardeController@getPlanningGardes
+  POST            api/planning/save ................................................... PlanningGardeController@savePlanningGardes
+  POST            api/reset-password ........................................................... API\PasswordResetController@reset
+  GET|HEAD        api/statistique/demandes-mensuelles ........................... API\StatistiqueController@statistiquesMensuelles
+  GET|HEAD        api/statistique/demandes-trimestrielles ................... API\StatistiqueController@statistiquesTrimestrielles
+  GET|HEAD        api/statistique/demandeurs ........................................... API\StatistiqueController@listeDemandeurs
+  GET|HEAD        api/statistique/export-demandes-statistiques .............. API\StatistiqueController@exportDemandesStatistiques
+  GET|HEAD        api/statistique/export-demandes-vehicules .................... API\StatistiqueController@exportDemandesVehicules
+  POST            api/statistique/export-liste-demandeurs ........................ API\StatistiqueController@exportListeDemandeurs
+  GET|HEAD        api/statistique/liste-demandeurs-export ........................ API\StatistiqueController@exportListeDemandeurs
+  GET|HEAD        api/statistique/repartition-chauffeurs ............ API\StatistiqueController@repartitionChauffeursDisponibilite
+  GET|HEAD        api/user/all ......................................................................... UserController@getAllUser
+  POST            api/user/delete ...................................................................... UserController@deleteUser
+  GET|HEAD        api/user/get/{userId} ............................................................... UserController@getUserById
+  POST            api/user/load-by-email .......................................................... UserController@loadUserByEmail
+  POST            api/user/update ...................................................................... UserController@updateUser
+  POST            api/users/changePassword ......................................................... UserController@changePassword
+  GET|HEAD        api/users/list ....................................................................... UserController@getAllUser
+  GET|HEAD        api/users/{userId} ............................................................. UserController@getUserByIdArray
+  GET|HEAD        api/vehicule/categorie-permis ............................................ VehiculeController@getCategoriePermis
+  POST            api/vehicule/delete-conduire ................................................. VehiculeController@deleteConduire
+  GET|HEAD        api/vehicule/get/{vehiculeId} ............................................... VehiculeController@getVehiculeById
+  GET|HEAD        api/vehicule/list .............................................................. VehiculeController@getVehicules
+  POST            api/vehicule/save .............................................................. VehiculeController@saveVehicule
+  POST            api/vehicule/save-categorie-permis ...................................... VehiculeController@saveCategoriePermis
+  POST            api/vehicule/save-conduire ..................................................... VehiculeController@saveConduire
+  POST            api/vehicule/save-type ..................................................... VehiculeController@saveTypeVehicule
+  GET|HEAD        api/vehicule/type ......................................................... VehiculeController@getTypesVehicules
+  GET|HEAD        oauth/authorize ....... passport.authorizations.authorize ÔÇ║ Laravel\Passport ÔÇ║ AuthorizationController@authorize
+  POST            oauth/authorize .... passport.authorizations.approve ÔÇ║ Laravel\Passport ÔÇ║ ApproveAuthorizationController@approve
+  DELETE          oauth/authorize ............. passport.authorizations.deny ÔÇ║ Laravel\Passport ÔÇ║ DenyAuthorizationController@deny
+  GET|HEAD        oauth/clients ............................. passport.clients.index ÔÇ║ Laravel\Passport ÔÇ║ ClientController@forUser
+  POST            oauth/clients ............................... passport.clients.store ÔÇ║ Laravel\Passport ÔÇ║ ClientController@store
+  PUT             oauth/clients/{client_id} ................. passport.clients.update ÔÇ║ Laravel\Passport ÔÇ║ ClientController@update
+  DELETE          oauth/clients/{client_id} ............... passport.clients.destroy ÔÇ║ Laravel\Passport ÔÇ║ ClientController@destroy
+  GET|HEAD        oauth/personal-access-tokens passport.personal.tokens.index ÔÇ║ Laravel\Passport ÔÇ║ PersonalAccessTokenController@ÔÇª
+  POST            oauth/personal-access-tokens passport.personal.tokens.store ÔÇ║ Laravel\Passport ÔÇ║ PersonalAccessTokenController@ÔÇª
+  DELETE          oauth/personal-access-tokens/{token_id} passport.personal.tokens.destroy ÔÇ║ Laravel\Passport ÔÇ║ PersonalAccessTokÔÇª
+  GET|HEAD        oauth/scopes .................................... passport.scopes.index ÔÇ║ Laravel\Passport ÔÇ║ ScopeController@all
+  POST            oauth/token ............................... passport.token ÔÇ║ Laravel\Passport ÔÇ║ AccessTokenController@issueToken
+  POST            oauth/token/refresh ............... passport.token.refresh ÔÇ║ Laravel\Passport ÔÇ║ TransientTokenController@refresh
+  GET|HEAD        oauth/tokens ................ passport.tokens.index ÔÇ║ Laravel\Passport ÔÇ║ AuthorizedAccessTokenController@forUser
+  DELETE          oauth/tokens/{token_id} ... passport.tokens.destroy ÔÇ║ Laravel\Passport ÔÇ║ AuthorizedAccessTokenController@destroy
+  GET|HEAD        reset-password/{token} .......................................................................... password.reset
+  GET|HEAD        sanctum/csrf-cookie .......................... sanctum.csrf-cookie ÔÇ║ Laravel\Sanctum ÔÇ║ CsrfCookieController@show
+
+                                                                                                               Showing [95] routes
+
