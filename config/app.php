@@ -161,6 +161,8 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        
+        Laravel\Sanctum\SanctumServiceProvider::class,
 
         Maatwebsite\Excel\ExcelServiceProvider::class,
 
@@ -238,7 +240,7 @@ return [
 
         'Excel' => Maatwebsite\Excel\Facades\Excel::class,
 
-        'PDF' => Barryvdh\DomPDF\Facade::class,
+        'PDF' => Barryvdh\DomPDF\Facade\Pdf::class,
         
 
     ],

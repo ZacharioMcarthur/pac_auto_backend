@@ -2,7 +2,7 @@
 
 return [
 
-    'paths' => ['api/*'], // applique aux routes API
+    'paths' => ['api/*', 'sanctum/csrf-cookie'], // applique aux routes API
 
     'allowed_methods' => ['*'], // autorise toutes les méthodes : GET, POST, PUT, etc.
 
@@ -16,6 +16,6 @@ return [
 
     'max_age' => 0,
 
-    'supports_credentials' => false,
+    'supports_credentials' => true,
 
 ];
