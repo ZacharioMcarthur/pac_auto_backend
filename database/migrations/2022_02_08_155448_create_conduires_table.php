@@ -29,6 +29,6 @@ class CreateConduiresTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('conduire');
+        Schema::dropIfExists('conduires');
     }
 }

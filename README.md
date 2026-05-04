@@ -1,39 +1,52 @@
-# Service Backend Parc Automobile PAC
+# ParcAuto Backend API
 
-Service backend du projet Parc Automobile PAC
+Backend Laravel du projet Parc Automobile PAC.  
+Ce service expose les endpoints API consommés par Flutter et gère la persistance MySQL.
 
-## Installation
+## Stack
+- Laravel 10
+- PHP 8.1+
+- MySQL
+- Laravel Sanctum (token Bearer)
 
-**Prérequis :**
-* Composer [Installer Composer](https://getcomposer.org/download/)
-* Un éditeur de code (Visual Studio Code par exemple) [Installer Visual Studio code](https://code.visualstudio.com/download)
+## Démarrage rapide
+1. Installer les dépendances:
+   - `composer install`
+2. Initialiser l'environnement:
+   - Copier `.env.example` vers `.env`
+   - Configurer la base de données
+   - `php artisan key:generate`
+3. Lancer les migrations:
+   - `php artisan migrate`
+4. Démarrer le serveur local:
+   - `php artisan serve`
 
-**Cloner le projet backend :**
-```bash
-git clone https://github.com/bescportcotonou/parcautopacservices.git
-```
-<br>
+## Authentification API
+- Connexion: `POST /api/login`
+- Routes protégées: middleware `auth:sanctum`
+- Header à envoyer côté client Flutter:
+  - `Authorization: Bearer <token>`
+  - `Accept: application/json`
 
-**Installer les dépendances :**
-```bash
-composer install
-```
-<br>
+## Contrat de réponse JSON
+Les endpoints doivent retourner un format homogène:
+- `success` (bool)
+- `status` (int)
+- `message` (string)
+- `data` (mixed)
+- `errors` (array, en cas de validation)
 
-**Jouer les migrations :**
-```bash
-php artisan migrate
-```
-<br>
+## Variables sensibles
+Ne pas versionner de vrais secrets dans `.env.example`:
+- DB password
+- API keys SMS/tiers
+- comptes admin réels
 
-**Installer Laravel Passport pour l'authentification :**
-```bash
-php artisan passport:install
-```
-<br>
-
-
-**Lancement du projet :** <br>
-```bash
- php artisan serve
-```
+## Documentation projet
+Consulter:
+- `docs/ARCHITECTURE.md`
+- `docs/FILE_IMPORTANCE.md`
+- `docs/API_CONTRACT.md`
+- `docs/ENDPOINTS.md`
+- `docs/DEPLOYMENT.md`
+- `docs/ENV_REFERENCE.md`

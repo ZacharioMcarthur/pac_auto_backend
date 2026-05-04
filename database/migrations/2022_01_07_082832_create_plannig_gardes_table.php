@@ -14,7 +14,7 @@ class CreatePlannigGardesTable extends Migration
     public function up()
     {
         Schema::create('planning_gardes', function (Blueprint $table) {
-            $table->id();;
+            $table->id();
             $table->dateTime('date_debut');
             $table->dateTime('date_fin');            
             $table->boolean('statut');
@@ -29,6 +29,6 @@ class CreatePlannigGardesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('plannig_gardes');
+        Schema::dropIfExists('planning_gardes');
     }
 }

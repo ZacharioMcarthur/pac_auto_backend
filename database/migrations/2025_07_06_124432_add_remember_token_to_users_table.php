@@ -8,17 +8,19 @@ class AddRememberTokenToUsersTable extends Migration
 {
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            if (!Schema::hasColumn('users', 'remember_token')) {
-                $table->rememberToken()->after('direction_id');
-            }
-        });
+        if (!Schema::hasColumn('users', 'remember_token')) {
+            Schema::table('users', function (Blueprint $table) {
+                $table->rememberToken()->after('entite_id');
+            });
+        }
     }
 
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('remember_token');
-        });
+        if (Schema::hasColumn('users', 'remember_token')) {
+            Schema::table('users', function (Blueprint $table) {
+                $table->dropColumn('remember_token');
+            });
+        }
     }
 }
